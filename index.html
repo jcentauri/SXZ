@@ -1,0 +1,83 @@
+<html>
+<head>
+
+
+
+
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+
+ <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+<audio class="audioPlayer" id="audio"  controls autoplay style="width:600px">
+
+  <source src="testa.mp3" type="audio/mpeg">
+
+</audio>
+
+
+
+  <div class="player">
+    <div class="details">
+      <div class="now-playing">10 Tracks</div>
+      <div class="track-art"></div>
+      <div class="track-name">SXZ</div>
+      <div class="track-artist">Mix</div>
+    </div>
+    <div class="buttons">
+      <div class="prev-track" onclick="prevTrack()"><i class="fa fa-step-backward fa-2x"></i></div>
+      <div class="playpause-track" id="playpause_btn" onclick="playpauseTrack()"><i class="fa fa-play-circle fa-5x"></i></div>
+      <div class="next-track" onclick="nextTrack()"><i class="fa fa-step-forward fa-2x"></i></div>
+    </div>
+
+    <div class="slider_container">
+      <div class="current-time">00:00</div>
+      <input type="range" min="1" max="100" value="0" class="seek_slider" onchange="seekTo()">
+      <div class="total-duration">00:00</div>
+    </div>
+
+   <div class="extrabuttons">
+<button type="button" class="once" id="btnOnce" onclick="once()">once</button>
+<button type="button" class="loop" id="btnLoop" onclick="loop()">loop</button>
+<button type="button" class="loopall" id="btnPlaylistloop" onclick="playlistloop()">loop all</button>
+<button type="button" class="reset" id="btnReset" onclick="reset()">reset</button>
+
+    </div>
+
+
+
+<button type="button" class="btnPlaylist" id="btnPlaylist" onclick="myFunction()">show playlist</button>
+
+<div id="myDIV">
+
+    <ul id="sortlist">
+      <li>01-RYBLWTLN <input type="checkbox" name="fruits[]" value="01-RYBLWTLN.mp3"> </li>
+      <li>02-XZJXSZ<input type="checkbox" name="fruits[]" value="02-XZJXSZ.mp3"> </li>
+      <li>03-GDBSSZ<input type="checkbox" name="fruits[]" value="03-GDBSSZ.mp3"> </li>
+      <li>04-ZTSZ<input type="checkbox" name="fruits[]" value="04-ZTSZ.mp3"> </li>
+      <li>05-SWLSJDGMWTLN<input type="checkbox" name="fruits[]" value="05-SWLSJDGMWTLN.mp3"> </li>
+      <li>06-YSGDZY<input type="checkbox" name="fruits[]" value="06-YSGDZY.mp3"> </li>
+      <li>07-GYLGZY<input type="checkbox" name="fruits[]" value="07-GYLGZY.mp3"> </li>
+      <li>08-QFMZZY<input type="checkbox" name="fruits[]" value="08-QFMZZY.mp3"> </li>
+      <li>09-WSZ<input type="checkbox" name="fruits[]" value="09-WSZ.mp3"> </li>
+      <li>10-DJXTNZ<input type="checkbox" name="fruits[]" value="10-DJXTNZ.mp3"> </li>
+    </ul>
+
+
+<button onclick="serialize()">Play Selected
+</button>
+<div id="serialized">
+</div>
+
+  
+</div>
+
+
+<script src="main.js"></script>
+
+
+</body>
+</html>
